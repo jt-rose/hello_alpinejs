@@ -12,5 +12,11 @@
       <button @click="count++">+</button>
       <button @click="count--">-</button>
     </div>
+
+    <div x-data="{ open: false }">
+      <h1>Toggle with alpine</h1>
+      <button @click=" open = !open">toggle</button>
+      <h3 x-show="open">Show me!</h3>
+    </div>
   </body>
 </html>
