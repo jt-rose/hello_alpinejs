@@ -18,5 +18,11 @@
       <button @click=" open = !open">toggle</button>
       <h3 x-show="open">Show me!</h3>
     </div>
+    <h3>For loop</h3>
+    <ul x-data="{ monsters: ['Dracula', 'Wolfman', 'Mummy']}">
+      <template x-for="name in monsters">
+        <li x-text="name"></li>
+      </template>
+    </ul>
   </body>
 </html>
