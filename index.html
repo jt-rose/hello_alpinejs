@@ -36,5 +36,18 @@
 
       <span x-show="open">Some Other Content...</span>
     </div>
+    <div x-data>
+      <template x-for="tab in $store.tabs.items"> ... </template>
+    </div>
+
+    <div x-data>
+      <p x-text="$store.tabs.current"></p>
+    </div>
+
+    <div x-data>
+      <button @click="$store.tabs.current = 'first'">First Tab</button>
+      <button @click="$store.tabs.current = 'second'">Second Tab</button>
+      <button @click="$store.tabs.current = 'third'">Third Tab</button>
+    </div>
   </body>
 </html>

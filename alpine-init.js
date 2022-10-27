@@ -6,5 +6,11 @@ Alpine.data("dropdown", () => ({
   },
 }));
 
+Alpine.store("tabs", {
+  current: "first",
+
+  items: ["first", "second", "third"],
+});
+
 window.Alpine = Alpine;
 Alpine.start();
