@@ -4,6 +4,7 @@
       defer
       src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+    <script defer src="alpine-init.js"></script>
   </head>
   <body>
     <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
@@ -24,5 +25,16 @@
         <li x-text="name"></li>
       </template>
     </ul>
+    <div x-data="dropdown">
+      <button @click="toggle">Expand</button>
+
+      <span x-show="open">Content...</span>
+    </div>
+
+    <div x-data="dropdown">
+      <button @click="toggle">Expand</button>
+
+      <span x-show="open">Some Other Content...</span>
+    </div>
   </body>
 </html>
